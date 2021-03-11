@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('/', function () {
-//     return view('layuot');
+//     return view('welcome');
 // });
 Route::get('/','Controller@Index')->name("home");
