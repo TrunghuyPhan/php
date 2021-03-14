@@ -21,7 +21,7 @@
       </div>
       <div class="col-md-4">
         <div class="product-item">
-          <a href="#"><img src="../public/img/product_01.jpg" alt=""></a>
+          <a href="#"><img src="{{asset('img/product_01.jpg')}}" alt=""></a>
           <div class="down-content">
             <a href="#">
               <h4>Tittle goes here</h4>
@@ -41,7 +41,7 @@
       </div>
       <div class="col-md-4">
         <div class="product-item">
-          <a href="#"><img src="../public/img/product_02.jpg" alt=""></a>
+          <a href="#"><img src="{{asset('img/product_02.jpg')}}" alt=""></a>
           <div class="down-content">
             <a href="#">
               <h4>Tittle goes here</h4>
@@ -61,7 +61,7 @@
       </div>
       <div class="col-md-4">
         <div class="product-item">
-          <a href="#"><img src="../public/img/product_03.jpg" alt=""></a>
+          <a href="#"><img src="{{asset('img/product_03.jpg')}}" alt=""></a>
           <div class="down-content">
             <a href="#">
               <h4>Tittle goes here</h4>
@@ -81,7 +81,7 @@
       </div>
       <div class="col-md-4">
         <div class="product-item">
-          <a href="#"><img src="../public/img/product_04.jpg" alt=""></a>
+          <a href="#"><img src="{{asset('img/product_04.jpg')}}" alt=""></a>
           <div class="down-content">
             <a href="#">
               <h4>Tittle goes here</h4>
@@ -101,7 +101,7 @@
       </div>
       <div class="col-md-4">
         <div class="product-item">
-          <a href="#"><img src="../public/img/product_05.jpg" alt=""></a>
+          <a href="#"><img src="{{asset('img/product_05.jpg')}}" alt=""></a>
           <div class="down-content">
             <a href="#">
               <h4>Tittle goes here</h4>
@@ -121,7 +121,7 @@
       </div>
       <div class="col-md-4">
         <div class="product-item">
-          <a href="#"><img src="../public/img/product_06.jpg" alt=""></a>
+          <a href="#"><img src="{{asset('img/product_06.jpg')}}" alt=""></a>
           <div class="down-content">
             <a href="#">
               <h4>Tittle goes here</h4>
