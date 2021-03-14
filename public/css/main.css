@@ -206,12 +206,14 @@ a.filled-button:hover {
 	width: 100%;
 	height: 80px;
 	background-color: #232323;
+	position: relative;
 	-webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
     
 }
+
 #header .navbar {
 	padding: 17px 0px;
 }
