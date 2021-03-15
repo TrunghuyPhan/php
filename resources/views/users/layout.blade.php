@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,6 +42,8 @@
             </li>
           </ul>
 =======
+=======
+>>>>>>> f2a946c39c62983bef477637e3f8ef2e4814b404
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huy</title>
@@ -160,33 +162,39 @@
               </li>
             </ul>
           </div>
+<<<<<<< HEAD
 >>>>>>> 948e848bef97812653e81d9cbc3aa03aa8f8107e
+=======
+>>>>>>> f2a946c39c62983bef477637e3f8ef2e4814b404
         </div>
-      </div>
-    </nav>
-  </div>
+      </nav>
+</div>
 
-  @yield('content')
+        @yield('content')
 
-
-
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="inner-content">
-            <p>Copyright &copy; 2020 Sixteen Clothing Co., Ltd.
-
-              - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+    
+   
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <p>Copyright &copy; 2020 Sixteen Clothing Co., Ltd.
+            
+            - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+            </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   </footer>
 =======
     </footer> -->
 >>>>>>> 948e848bef97812653e81d9cbc3aa03aa8f8107e
+=======
+    </footer> -->
+>>>>>>> f2a946c39c62983bef477637e3f8ef2e4814b404
 </body>
-
 </html>
