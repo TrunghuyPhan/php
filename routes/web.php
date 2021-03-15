@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+<<<<<<< HEAD
 Route::get('/', 'Controller@Index')->name("home");
 Route::get('/trang-huy', 'HomeController@Huy');
 Route::get('/about', 'HomeController@About');
 Route::get('/admin-login', 'AdminController@Login');
+=======
+Route::get('/','HomeController@Index')->name("home");
+>>>>>>> 948e848bef97812653e81d9cbc3aa03aa8f8107e
