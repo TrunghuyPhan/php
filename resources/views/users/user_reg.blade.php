@@ -1,5 +1,5 @@
 <div class="modal fade" id="register">
-    <div class="modal-dialog" style="width:500px; margin-top:400px;">
+    <div class="modal-dialog" style="width:500px;">
         <div class="modal-content">
             <form>
                 <div class="modal-header" style="background: rgb(0,64,87); color: #FFF; text-align: center;">

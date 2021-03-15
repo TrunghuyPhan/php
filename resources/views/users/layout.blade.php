@@ -30,9 +30,10 @@
           </div>
           <div class="col">
             <div class="top-bar__link ">
-              <a data-toggle="modal" data-target="#register">Register</a>
-              <span>/</span>
-              <a data-toggle="modal" data-target="#login">Login</a>
+              <ul>
+                <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">Đăng ký</button></li>
+                <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">Đăng nhập</button></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -48,13 +49,15 @@
             <nav class="navbar navbar-expand-sm justify-content-center">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Trang chủ</a>
+                  <a class="nav-link" href="{{route('home')}}">Trang chủ</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown">Điện Thoại</a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Apple</a>
-                    <a class="dropdown-item" href="#">SamSung</a>
+                  
+                    @foreach($loai_sp as $loai)
+                      <a class="dropdown-item" href="#">{{$loai->name}}</a>
+                    @endforeach
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Xem tất cả</a>
                   </div>
