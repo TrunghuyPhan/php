@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@Index')->name("home");
 Route::get('/user-register', 'UserController@Register')->name("dangky");
 Route::post('/user-login', 'UserController@Login')->name('dangnhap');
+Route::get('/all-product', 'ProductController@AllProduct')->name('allproduct');

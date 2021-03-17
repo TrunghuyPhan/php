@@ -13,4 +13,5 @@ class HomeController extends Controller
         return view('users.home')->with('all_product',$all_product); //1
     
     }
+   
 }

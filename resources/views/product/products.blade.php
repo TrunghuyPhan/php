@@ -1,26 +1,8 @@
 @extends('users.layout')
 @section('content')
-<div class="banner header-text">
-  <div class="owl-banner owl-carousel">
-    <div class="banner-item-01">
-      <div class="text-content">
-        <h4>Best Offer</h4>
-        <h2>New Arrivals On Sale</h2>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="latest-products">
-  <div class="container">
+<div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <div class="section-heading">
-          <h2>Sản phẩm mới nhất</h2>
-          <a href="{{route('allproduct')}}">Xem tất cả <i class="fa fa-angle-right"></i></a>
-        </div>
-      </div>
-      @foreach($all_product as $key => $product)
+@foreach($all_product as $key => $product)
       <div class="col-md-4">
         <div class="product-item">
           <a href="#"><img src="{{URL::to('/img/'.$product->product_image)}}" alt=""></a>
@@ -47,7 +29,6 @@
       </div>
       @endforeach
     </div>
-  </div>
 </div>
-
+      
 @endsection
