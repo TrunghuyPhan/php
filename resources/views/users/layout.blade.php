@@ -55,8 +55,8 @@
                   <a class="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown">Điện Thoại</a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   
-                    @foreach($loai_sp as $loai)
-                      <a class="dropdown-item" href="#">{{$loai->name}}</a>
+                    @foreach($Phone as $phone)
+                      <a class="dropdown-item" href="#">{{$phone->name}}</a>
                     @endforeach
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Xem tất cả</a>
@@ -65,8 +65,9 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown">Tablet</a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Apple</a>
-                    <a class="dropdown-item" href="#">SamSung</a>
+                  @foreach($Tablet as $tablet)
+                      <a class="dropdown-item" href="#">{{$tablet->name}}</a>
+                    @endforeach
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Xem tất cả</a>
                   </div>
@@ -74,8 +75,9 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown">Watch</a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Apple</a>
-                    <a class="dropdown-item" href="#">SamSung</a>
+                  @foreach($Watch as $watch)
+                      <a class="dropdown-item" href="#">{{$watch->name}}</a>
+                    @endforeach
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Xem tất cả</a>
                   </div>
