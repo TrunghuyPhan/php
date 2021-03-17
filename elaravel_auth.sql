@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 17, 2021 lúc 08:59 AM
+-- Thời gian đã tạo: Th3 17, 2021 lúc 09:14 AM
 -- Phiên bản máy phục vụ: 10.4.14-MariaDB
 -- Phiên bản PHP: 7.4.10
 
@@ -13604,16 +13604,6 @@ ALTER TABLE `types_product`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- Các ràng buộc cho các bảng đã đổ
---
-
---
--- Các ràng buộc cho bảng `types_product`
---
-ALTER TABLE `types_product`
-  ADD CONSTRAINT `FK_types_product_main_menu` FOREIGN KEY (`id_parents`) REFERENCES `main_menu` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
