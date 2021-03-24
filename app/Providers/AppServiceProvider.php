@@ -16,7 +16,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        
     }
 
     /**
@@ -32,15 +31,10 @@ class AppServiceProvider extends ServiceProvider
         // });
 
         view()->composer('users.layout', function ($view) {
-            $Phone=DB::table('types_product')->where('id_parents','=',1)->select('*')
-            ->get();
-            $Tablet=DB::table('types_product')->where('id_parents','=',2)->select('*')
-            ->get();
-            $Watch=DB::table('types_product')->where('id_parents','=',3)->select('*')
-            ->get();
-            $view->with('Phone',$Phone);
-            $view->with('Tablet',$Tablet);
-            $view->with('Watch',$Watch);
+            $Phone = DB::table('tbl_category_product')->select('*')
+                ->get();
+
+            $view->with('Phone', $Phone);
         });
     }
 }

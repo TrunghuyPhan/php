@@ -51,37 +51,23 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="{{route('home')}}">Trang chủ</a>
                 </li>
+                @foreach($Phone as $phone)
+                @if($phone->category_parent == 0)
+                <!-- lấy thằng cha -->
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown">Điện Thoại</a>
+                  <a class="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown">{{$phone->category_name}}</a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  
-                    @foreach($Phone as $phone)
-                      <a class="dropdown-item" href="#">{{$phone->name}}</a>
-                    @endforeach
+                    @foreach($Phone as $o)
+                    @if($o->category_parent == $phone->category_id)
+                    <!-- lấy thằng con -->
+                    <a class="dropdown-item" href="">{{$o->category_name}}</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Xem tất cả</a>
+                    @endif
+                    @endforeach
                   </div>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown">Tablet</a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  @foreach($Tablet as $tablet)
-                      <a class="dropdown-item" href="#">{{$tablet->name}}</a>
-                    @endforeach
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Xem tất cả</a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle " id="navbarDropdown" role="button" data-toggle="dropdown">Watch</a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  @foreach($Watch as $watch)
-                      <a class="dropdown-item" href="#">{{$watch->name}}</a>
-                    @endforeach
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Xem tất cả</a>
-                  </div>
-                </li>
+                @endif
+                @endforeach
                 <li class="nav-item">
                   <a class="nav-link" href="#">Liên Hệ</a>
                 </li>
