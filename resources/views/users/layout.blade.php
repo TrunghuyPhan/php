@@ -31,24 +31,31 @@
           <!-- Col này là col tìm kiếm đó -->
           <div class="col">
             <div class="input-group" style="margin-top: 2.5px;">
-              <input type="text" class="form-control" placeholder="Search this blog">
-              <div class="input-group-append">
-                <button class="btn btn-secondary" type="button">
-                  <i class="fa fa-search"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- Kết thúc col -->
-          <div class="col">
-            <div class="top-bar__link ">
-              <ul>
-                <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">Đăng ký</button></li>
-                <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">Đăng nhập</button></li>
-              </ul>
+              <!-- <form action="{{URL::to('/search-product')}}" method="get">
+                <input class="search-bar" type="text" placeholder="Searching" name="search" class="form-control">
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button" name="ok" value="search">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </form> -->
+              <form action="{{URL::to('/search-product')}}" method="get">
+                <input class="search-bar" type="text" placeholder="Searching" name="search">
+                <input type="submit" name="ok" class="searchbtn" />
+              </form>
             </div>
           </div>
         </div>
+        <!-- Kết thúc col -->
+        <div class="col">
+          <div class="top-bar__link ">
+            <ul>
+              <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">Đăng ký</button></li>
+              <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">Đăng nhập</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
     <section class="bottom-bar">
