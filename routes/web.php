@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', 'HomeController@Index')->name("home");
 Route::get('/all-product', 'ProductController@AllProduct')->name('allproduct');
+Route::get('/search-product', 'ProductController@Search')->name('search');
 Route::get('/product-details/{product_slug}', 'ProductController@DetailsProduct')->name('details');
 /*Đăng ký*/
 Route::post('/dangky','HomeController@dangky')->name('dangky');
