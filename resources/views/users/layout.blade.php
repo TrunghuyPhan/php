@@ -28,6 +28,18 @@
           <div class="col">
 
           </div>
+          <!-- Col này là col tìm kiếm đó -->
+          <div class="col">
+            <div class="input-group" style="margin-top: 2.5px;">
+              <input type="text" class="form-control" placeholder="Search this blog">
+              <div class="input-group-append">
+                <button class="btn btn-secondary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Kết thúc col -->
           <div class="col">
             <div class="top-bar__link ">
               <ul>
