@@ -203,23 +203,27 @@ a.filled-button:hover {
 *******Header CSS******
 **************************/
 header {
-    position: sticky;
     position: relative;
-    z-index: 99999;
 }
 .top-bar {
     background-color: #ed0080;
-    height: 40px;
+    min-height: 40px;
 }
-.top-bar__link a,
-span {
-    font-weight: 600;
-    font-size: 20px;
-    color: white;
+.top-bar__link {
+    height: 45px;
+}
+.top-bar__link ul li {
     float: right;
+    margin-left: 0.5em;
 }
-.top-bar__link a:hover {
-    color: black;
+.top-bar__link button {
+    background: black;
+    color: #fff;
+    border: none;
+    min-height: 30px;
+    border: 1px solid;
+    margin-top: 2.5px;
+    transition: all 1s ease-in-out;
 }
 .top-nav__logo {
     height: 95px;
@@ -252,7 +256,22 @@ span {
     padding-bottom: 25px;
     border-bottom: 3px solid #ed0080;
 }
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
 
+.dropdown > .dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+.dropdown-item {
+    font-weight: 600;
+}
+.dropdown-item:hover {
+    background-color: #ed0080;
+    color: white;
+    font-weight: 600;
+}
 /* Banner Style */
 .banner {
     position: relative;

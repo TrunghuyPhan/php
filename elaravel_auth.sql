@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 14, 2021 lúc 10:22 PM
+-- Thời gian đã tạo: Th3 17, 2021 lúc 09:14 AM
 -- Phiên bản máy phục vụ: 10.4.14-MariaDB
 -- Phiên bản PHP: 7.4.10
 
@@ -13226,6 +13226,32 @@ INSERT INTO `tbl_xaphuongthitran` (`xaid`, `name_xaphuong`, `type`, `maqh`) VALU
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `types_product`
+--
+
+CREATE TABLE `types_product` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `id_parents` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `types_product`
+--
+
+INSERT INTO `types_product` (`id`, `name`, `id_parents`) VALUES
+(1, 'Apple', 1),
+(2, 'SamSung', 1),
+(3, 'Apple', 2),
+(4, 'SamSung', 2),
+(5, 'OPPO', 2),
+(6, 'Apple', 3),
+(7, 'SamSung', 3),
+(8, 'Xiaomi', 3);
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `users`
 --
 
@@ -13407,6 +13433,13 @@ ALTER TABLE `tbl_xaphuongthitran`
   ADD PRIMARY KEY (`xaid`);
 
 --
+-- Chỉ mục cho bảng `types_product`
+--
+ALTER TABLE `types_product`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FK_types_product_main_menu` (`id_parents`);
+
+--
 -- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
@@ -13559,6 +13592,12 @@ ALTER TABLE `tbl_videos`
 --
 ALTER TABLE `tbl_visitors`
   MODIFY `id_visitors` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT cho bảng `types_product`
+--
+ALTER TABLE `types_product`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `users`

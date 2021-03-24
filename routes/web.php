@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Route::get('/', 'Controller@Index')->name("home");
 Route::get('/trang-huy', 'HomeController@Huy');
 Route::get('/about', 'HomeController@About');
@@ -28,3 +29,19 @@ Route::get('/','HomeController@Index')->name("home");
 =======
 Route::get('/','HomeController@Index')->name("home");
 >>>>>>> f2a946c39c62983bef477637e3f8ef2e4814b404
+=======
+Route::get('/', 'HomeController@Index')->name("home");
+Route::get('/all-product', 'ProductController@AllProduct')->name('allproduct');
+Route::get('/search-product', 'ProductController@Search')->name('search');
+Route::get('/product-details/{product_slug}', 'ProductController@DetailsProduct')->name('details');
+/*Đăng ký*/
+Route::post('/dangky','HomeController@dangky')->name('dangky');
+/*Đăng nhập*/
+Route::post('/dangnhap','HomeController@dangnhap')->name('dangnhap');
+/*Đăng xuất*/
+    Route::get('logout', function(){
+        session()->flush();
+        // $tinh = DB::select("SELECT Tên FROM tinh");
+        return redirect(route("home"));
+    })->name('logout');
+>>>>>>> b7d73a9e4e5518a2495ba97c12131cc4037e479e
