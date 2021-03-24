@@ -17,7 +17,15 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/', 'HomeController@Index')->name("home");
-Route::get('/user-register', 'UserController@Register')->name("dangky");
-Route::post('/user-login', 'UserController@Login')->name('dangnhap');
 Route::get('/all-product', 'ProductController@AllProduct')->name('allproduct');
 Route::get('/product-details/{product_slug}', 'ProductController@DetailsProduct')->name('details');
+/*Đăng ký*/
+Route::post('/dangky','HomeController@dangky')->name('dangky');
+/*Đăng nhập*/
+Route::post('/dangnhap','HomeController@dangnhap')->name('dangnhap');
+/*Đăng xuất*/
+    Route::get('logout', function(){
+        session()->flush();
+        // $tinh = DB::select("SELECT Tên FROM tinh");
+        return redirect(route("home"));
+    })->name('logout');
