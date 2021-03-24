@@ -18,6 +18,13 @@ class ProductController extends Controller
         // return view('users.products')->with('all_product',$all_product); //1
 
     }
+    public function Search()
+    {
+        $all_product = DB::table('tbl_product')->get('*');
+        return view('product.search_result')->with('all_product', $all_product); //1
+
+
+    }
     public function DetailsProduct($product_slug, Request $request)
     {
         $cate_product = DB::table('tbl_category_product')->where('category_status', '0')->orderby('category_id', 'desc')->get();
