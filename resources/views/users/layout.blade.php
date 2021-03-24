@@ -30,22 +30,18 @@
           </div>
           <!-- Col này là col tìm kiếm đó -->
           <div class="col">
-            <div class="input-group" style="margin-top: 2.5px;">
-              <!-- <form action="{{URL::to('/search-product')}}" method="get">
-                <input class="search-bar" type="text" placeholder="Searching" name="search" class="form-control">
+            
+            
+              <form  class="input-group" action="{{URL::to('/search-product')}}" method="get" style="margin-top:2.5px">
+                <input class="search-bar form-control" type="text" placeholder="Searching" name="search">
                 <div class="input-group-append">
-                  <button class="btn btn-secondary" type="button" name="ok" value="search">
+                  <button class="btn btn-secondary searchbtn" name="ok" type="submit">
                     <i class="fa fa-search"></i>
                   </button>
                 </div>
-              </form> -->
-              <form action="{{URL::to('/search-product')}}" method="get">
-                <input class="search-bar" type="text" placeholder="Searching" name="search">
-                <input type="submit" name="ok" class="searchbtn" />
               </form>
             </div>
-          </div>
-<<<<<<< HEAD
+         
           <!-- Kết thúc col -->
           <div class="col">
             <div class="top-bar__link ">
@@ -63,16 +59,6 @@
               </ul>
               @endif
             </div>
-=======
-        </div>
-        <!-- Kết thúc col -->
-        <div class="col">
-          <div class="top-bar__link ">
-            <ul>
-              <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">Đăng ký</button></li>
-              <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">Đăng nhập</button></li>
-            </ul>
->>>>>>> 1c0ff6125575925bfe27bc8dab7019d161db0fe3
           </div>
         </div>
       </div>
@@ -256,23 +242,6 @@
             /* Kiểm tra điện thoại*/
             if (dndt == "" ) {
               $(".dnloi").html("<div class='alert alert-danger'><strong>Không được để trống !</strong></div>");
-            
-            //     dntruyen = false;
-              //   if (dndt.search(bieuthuc) == -1  ) {
-              //       $(".dnloi").html("<div class='alert alert-danger'><strong>Số điện thoại bạn nhập không hợp lệ !</strong></div>");
-              //       dntruyen = false;
-              //   }
-              //  else if(atpos < 1 || ( dotpos - atpos < 2 )){
-              //     $(".dnloi").html("<div class='alert alert-danger'><strong>Số điện thoại bạn nhập không hợp lệ !</strong></div>");
-              //       dntruyen = false;
-              //  }
-              //   else {
-              //       $(".dnloi").html("");
-              //   }
-            // } else {
-            //     $(".dnloi").html("<div class='alert alert-danger'><strong>Không được để trống !</strong></div>");
-            //     dntruyen = false;
-            // }
             }
             /* Kiểm tra mật khẩu*/
             if (dnmk == "") {
